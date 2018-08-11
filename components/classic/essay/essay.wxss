@@ -1,0 +1,3 @@
+/* components/classic/essay/essay.wxss */
+
+@import '../common';

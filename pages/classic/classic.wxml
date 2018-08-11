@@ -1,0 +1,11 @@
+<!-- pages/classic/classic.wxml -->
+<view class="container">
+    <view class="header">
+        <epsoide-comp index="{{classic.index}}" class="epsoide" />
+        <like-comp class="like" bind:like="changeLike" isLike="{{likeStatus}}" count="{{likeCount}}" />
+    </view>
+    <movie-comp hidden="{{classic.type!==100}}" img="{{classic.image}}" content="{{classic.content}}" />
+    <music-comp wx:if="{{classic.type===200}}" img="{{classic.image}}" content="{{classic.content}}" src="{{classic.url}}" />
+    <essay-comp hidden="{{classic.type!==300}}" img="{{classic.image}}" content="{{classic.content}}" />
+    <navi-comp bind:left="onLeft" bind:right="onRight" class="navi" title="{{classic.title}}" first="{{first}}" latest="{{latest}}"></navi-comp>
+</view>

@@ -1,0 +1,5 @@
+<!--components/like/like.wxml-->
+<view class="container" bind:tap="changeImgSrcAndCountHandle">
+<image src="{{isLike?like:unLike}}"></image>
+<text>{{count}}</text>
+</view>
